@@ -12,6 +12,7 @@
 		9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5023E3B05100A51780 /* Main.storyboard */; };
 		9DC75A5423E3B05300A51780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5323E3B05300A51780 /* Assets.xcassets */; };
 		9DC75A5723E3B05300A51780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5523E3B05300A51780 /* LaunchScreen.storyboard */; };
+		9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6023E467DF00A51780 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9DC75A5323E3B05300A51780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DC75A5623E3B05300A51780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DC75A5823E3B05300A51780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DC75A6023E467DF00A51780 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		9DC75A5F23E4668900A51780 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9DC75A6023E467DF00A51780 /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
 				9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */,
+				9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 		9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6023E467DF00A51780 /* Coordinator.swift */; };
 		9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6223E4D09600A51780 /* AppCoordinator.swift */; };
 		9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6523E7956400A51780 /* RandomAPI.swift */; };
+		9DC75A6923E865F200A51780 /* TitleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6823E865F200A51780 /* TitleCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9DC75A6023E467DF00A51780 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9DC75A6223E4D09600A51780 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9DC75A6523E7956400A51780 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
+		9DC75A6823E865F200A51780 /* TitleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		9DC75A5E23E465CA00A51780 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				9DC75A6723E865C000A51780 /* Title */,
 				9DC75A6223E4D09600A51780 /* AppCoordinator.swift */,
 			);
 			path = Flows;
@@ -95,6 +98,14 @@
 				9DC75A6523E7956400A51780 /* RandomAPI.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9DC75A6723E865C000A51780 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				9DC75A6823E865F200A51780 /* TitleCoordinator.swift */,
+			);
+			path = Title;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */,
 				9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */,
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
+				9DC75A6923E865F200A51780 /* TitleCoordinator.swift in Sources */,
 				9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */,
 				9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */,
 			);

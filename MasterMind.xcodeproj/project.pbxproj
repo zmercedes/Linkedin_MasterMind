@@ -14,6 +14,7 @@
 		9DC75A5723E3B05300A51780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5523E3B05300A51780 /* LaunchScreen.storyboard */; };
 		9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6023E467DF00A51780 /* Coordinator.swift */; };
 		9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6223E4D09600A51780 /* AppCoordinator.swift */; };
+		9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6523E7956400A51780 /* RandomAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9DC75A5823E3B05300A51780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DC75A6023E467DF00A51780 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9DC75A6223E4D09600A51780 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9DC75A6523E7956400A51780 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		9DC75A4B23E3B05100A51780 /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
+				9DC75A6423E7757600A51780 /* Services */,
 				9DC75A5F23E4668900A51780 /* Protocols */,
 				9DC75A5E23E465CA00A51780 /* Flows */,
 				9DC75A4C23E3B05100A51780 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				9DC75A6023E467DF00A51780 /* Coordinator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DC75A6423E7757600A51780 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9DC75A6523E7956400A51780 /* RandomAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */,
+				9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */,
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
 				9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */,
 				9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */,

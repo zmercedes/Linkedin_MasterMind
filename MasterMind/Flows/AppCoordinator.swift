@@ -13,9 +13,10 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     enum Destination {
-        case game
-        case settings
+        case title
     }
+   
+    var titleCoordinator: TitleCoordinator?
     
     func start() {
         
@@ -23,10 +24,8 @@ class AppCoordinator: Coordinator {
     
     func navigate(to destination: AppCoordinator.Destination) {
         switch destination {
-        case .game:
-            print("travelled to game")
-        case .settings:
-            print("travelled to settings")
+        case .title:
+                print("navigated to title")
         }
     }
 }

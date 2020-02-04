@@ -15,8 +15,15 @@ class TitleCoordinator: Coordinator {
         case settings
     }
     
+    let navigationController: UINavigationController
+    
+    init(navigation: UINavigationController) {
+        self.navigationController = navigation
+    }
+    
     func start() {
-        
+        let viewController = TitleViewController()
+        navigationController.pushViewController(viewController, animated: false)
     }
     
     func navigate(to destination: Destination) {

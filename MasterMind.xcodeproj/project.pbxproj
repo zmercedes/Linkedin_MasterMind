@@ -16,6 +16,8 @@
 		9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6223E4D09600A51780 /* AppCoordinator.swift */; };
 		9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6523E7956400A51780 /* RandomAPI.swift */; };
 		9DC75A6923E865F200A51780 /* TitleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6823E865F200A51780 /* TitleCoordinator.swift */; };
+		9DC75A6C23E8D88900A51780 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A6A23E8D88900A51780 /* TitleViewController.swift */; };
+		9DC75A6D23E8D88900A51780 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A6B23E8D88900A51780 /* TitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9DC75A6223E4D09600A51780 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9DC75A6523E7956400A51780 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 		9DC75A6823E865F200A51780 /* TitleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCoordinator.swift; sourceTree = "<group>"; };
+		9DC75A6A23E8D88900A51780 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		9DC75A6B23E8D88900A51780 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				9DC75A6823E865F200A51780 /* TitleCoordinator.swift */,
+				9DC75A6A23E8D88900A51780 /* TitleViewController.swift */,
+				9DC75A6B23E8D88900A51780 /* TitleView.xib */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DC75A5723E3B05300A51780 /* LaunchScreen.storyboard in Resources */,
+				9DC75A6D23E8D88900A51780 /* TitleView.xib in Resources */,
 				9DC75A5423E3B05300A51780 /* Assets.xcassets in Resources */,
 				9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */,
 			);
@@ -182,6 +189,7 @@
 				9DC75A6323E4D09600A51780 /* AppCoordinator.swift in Sources */,
 				9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */,
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
+				9DC75A6C23E8D88900A51780 /* TitleViewController.swift in Sources */,
 				9DC75A6923E865F200A51780 /* TitleCoordinator.swift in Sources */,
 				9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */,
 				9DC75A6123E467DF00A51780 /* Coordinator.swift in Sources */,

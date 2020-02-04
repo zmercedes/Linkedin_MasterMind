@@ -15,10 +15,12 @@ class TitleCoordinator: Coordinator {
         case settings
     }
     
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
+    private let dependencies: Dependencies
     
-    init(navigation: UINavigationController) {
+    init(navigation: UINavigationController, dependencies: Dependencies) {
         self.navigationController = navigation
+        self.dependencies = dependencies
     }
     
     func start() {

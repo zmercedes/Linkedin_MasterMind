@@ -15,17 +15,27 @@ class AppCoordinator: Coordinator {
     enum Destination {
         case title
     }
-   
+    private let window: UIWindow
+    private let rootViewController: UINavigationController
     var titleCoordinator: TitleCoordinator?
     
+    init(window: UIWindow) {
+        self.window = window
+        self.rootViewController = UINavigationController()
+        self.window.rootViewController = rootViewController
+        self.window.backgroundColor = .black
+        self.window.makeKeyAndVisible()
+    }
+    
     func start() {
-        
+        navigate(to: .title)
     }
     
     func navigate(to destination: AppCoordinator.Destination) {
         switch destination {
         case .title:
-                print("navigated to title")
+            titleCoordinator = TitleCoordinator(navigation: rootViewController)
+            titleCoordinator?.start()
         }
     }
 }

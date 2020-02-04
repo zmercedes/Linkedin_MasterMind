@@ -33,7 +33,8 @@ class TitleCoordinator: Coordinator {
     func navigate(to destination: Destination) {
         switch destination {
         case .game:
-            gameCoordinator = GameCoordinator(dependencies: dependencies)
+            gameCoordinator = GameCoordinator(navigation: navigationController, dependencies: dependencies)
+            gameCoordinator?.delegate = self
             gameCoordinator?.start()
         case .settings:
             print("travelled to settings")
@@ -48,5 +49,11 @@ class TitleCoordinator: Coordinator {
 extension TitleCoordinator: TitleViewControllerDelegate {
     func startGame() {
         navigate(to: .game)
+    }
+}
+
+extension TitleCoordinator: GameCoordinatorDelegate {
+    func ended() {
+        gameCoordinator = nil
     }
 }

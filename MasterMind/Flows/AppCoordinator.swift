@@ -22,6 +22,7 @@ class AppCoordinator: Coordinator {
     init(window: UIWindow) {
         self.window = window
         self.rootViewController = UINavigationController()
+        self.rootViewController.setStyle()
         self.window.rootViewController = rootViewController
         self.window.backgroundColor = .black
         self.window.makeKeyAndVisible()

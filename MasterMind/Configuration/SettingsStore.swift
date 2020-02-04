@@ -23,7 +23,7 @@ class SettingsStore {
     
     init(userDefaults: UserDefaults = .standard) {
         self.userDefaults = userDefaults
-        if getLength() == nil || getMin() == nil || getMax() == nil {
+        if getLength() == 0 || getLength() == nil {
             saveValue(forKey: .digitLength, value: 4)
             saveValue(forKey: .min, value: 0)
             saveValue(forKey: .max, value: 7)

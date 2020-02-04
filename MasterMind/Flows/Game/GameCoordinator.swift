@@ -36,7 +36,7 @@ class GameCoordinator: Coordinator {
         if let newDigits = RandomAPI.get(total: total, min: min, max: max).result() {
             currentCombination = newDigits
         }
-        let viewController = UIViewController()
+        let viewController = GameViewController(combination: currentCombination)
         navigationController.pushViewController(viewController, animated: false)
     }
     

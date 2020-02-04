@@ -42,6 +42,10 @@ class SettingsStore {
         return readValue(forKey: .max)
     }
     
+    func storeValue(value: Int, key: Key) {
+        saveValue(forKey: key, value: value)
+    }
+    
     private func saveValue(forKey key: Key, value: Int) {
         userDefaults.set(value, forKey: key.make())
     }

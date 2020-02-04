@@ -17,9 +17,11 @@ class AppCoordinator: Coordinator {
     }
     private let window: UIWindow
     private let rootViewController: UINavigationController
+    private let dependencies: Dependencies
     var titleCoordinator: TitleCoordinator?
     
-    init(window: UIWindow) {
+    init(window: UIWindow, dependencies: Dependencies) {
+        self.dependencies = dependencies
         self.window = window
         self.rootViewController = UINavigationController()
         self.rootViewController.setStyle()
@@ -35,7 +37,7 @@ class AppCoordinator: Coordinator {
     func navigate(to destination: AppCoordinator.Destination) {
         switch destination {
         case .title:
-            titleCoordinator = TitleCoordinator(navigation: rootViewController)
+            titleCoordinator = TitleCoordinator(navigation: rootViewController, dependencies: dependencies)
             titleCoordinator?.start()
         }
     }

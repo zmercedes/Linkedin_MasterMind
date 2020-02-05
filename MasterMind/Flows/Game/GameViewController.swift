@@ -35,9 +35,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
+        resultsView.layer.cornerRadius = 6
+        resultsView.layer.borderWidth = 1
+        resultsView.layer.borderColor = UIColor.white.cgColor
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
-            print(currentCombination)
         }
         guessField.attributedPlaceholder = NSAttributedString(string: "guess here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         guessField.addTarget(self, action: #selector(onEditNextToggle(_:)), for: .editingChanged)

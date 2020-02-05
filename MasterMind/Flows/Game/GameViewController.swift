@@ -18,6 +18,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var guessField: UITextField!
     @IBOutlet weak var tryButton: UIButton!
     
+    @IBOutlet weak var previousTriesButton: UIButton!
+    @IBOutlet weak var triesTableView: UITableView!
+    
     var currentCombination: String
     
     init(combination: String?) {
@@ -48,6 +51,13 @@ class GameViewController: UIViewController {
     @IBAction func tryButtonPressed(_ sender: Any) {
         
         displayResults()
+    }
+
+    @IBAction func previousTriesPressed(_ sender: Any) {
+        let hidden = triesTableView.isHidden
+        let buttonText = hidden ? "close" : "previous tries"
+        previousTriesButton.setTitle(buttonText, for: .normal)
+        triesTableView.isHidden = !hidden
     }
     
     private func displayResults() {

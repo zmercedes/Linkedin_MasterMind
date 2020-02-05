@@ -24,19 +24,26 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var previousTriesButton: UIButton!
     @IBOutlet weak var triesTableView: UITableView!
+    @IBOutlet weak var triesTableViewHeight: NSLayoutConstraint!
     
     weak var delegate: GameViewControllerDelegate?
     
     var currentCombination: String = ""
+    var guesses: [String] = []
     var guessDict: [String:[Int]] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.setHidesBackButton(true, animated: false)
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
+            print(currentCombination)
         }
         guessField.attributedPlaceholder = NSAttributedString(string: "guess here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         guessField.addTarget(self, action: #selector(onEditNextToggle(_:)), for: .editingChanged)
+        
+        triesTableView.dataSource = self
+        triesTableView.register(GuessTableViewCell.self)
         
         var encode: String = ""
         for _ in 0..<currentCombination.count {
@@ -81,8 +88,29 @@ class GameViewController: UIViewController {
             let placeText = matches[1] > 0 ? "\(matches[1]) matched in right place!" : ""
             resultLabel.text = resultText
             placeLabel.text = placeText
+            guesses.append(guess)
             guessDict[guess] = matches
         }
+        triesTableViewHeight.constant = guesses.count > 0 ? CGFloat(42*guesses.count) : 42
+        triesTableView.reloadData()
         resultsView.isHidden = false
+    }
+}
+
+extension GameViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return guesses.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: GuessTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        let guessNumber = indexPath.row
+        let guess = guesses[guessNumber]
+        let result = guessDict[guess]
+        
+        cell.attemptNumberLabel.text = "\(guessNumber + 1)"
+        cell.attemptValueLabel.text = guess
+        cell.resultsLabel.text = "\(result![0]) ✔️ \(result![1]) ☑️"
+        return cell
     }
 }

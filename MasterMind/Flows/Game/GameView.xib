@@ -19,6 +19,7 @@
                 <outlet property="resultLabel" destination="Vx7-Yf-ZLW" id="lbP-MP-FE2"/>
                 <outlet property="resultsView" destination="YSJ-b9-IdR" id="nnk-0O-tND"/>
                 <outlet property="triesTableView" destination="yP4-rw-I0q" id="l1L-Ei-oUi"/>
+                <outlet property="triesTableViewHeight" destination="MQA-qs-oMK" id="uhC-bj-y73"/>
                 <outlet property="tryButton" destination="gUQ-34-4U3" id="xlf-zv-dgw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

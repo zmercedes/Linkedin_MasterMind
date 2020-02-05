@@ -21,7 +21,7 @@ class GameCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     private let dependencies: Dependencies
-    private var currentCombination: [Int]?
+    private var currentCombination: String?
     weak var delegate: GameCoordinatorDelegate?
     
     init(navigation: UINavigationController, dependencies: Dependencies){

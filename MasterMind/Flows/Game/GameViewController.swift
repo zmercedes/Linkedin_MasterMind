@@ -10,6 +10,7 @@ import UIKit
 
 protocol GameViewControllerDelegate: class {
     func requestDigits() -> String?
+    func gameOver()
 }
 
 class GameViewController: UIViewController {
@@ -40,6 +41,13 @@ class GameViewController: UIViewController {
         resultsView.layer.borderColor = UIColor.white.cgColor
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
+        } else {
+            let alertTitle = "Error"
+            let body = "Could not find any target. Try again later."
+            let alert = ResultsViewController(title: alertTitle, body: body) { [unowned self] in
+                self.delegate?.gameOver()
+            }
+            self.present(alert, animated: true, completion: nil)
         }
         guessField.attributedPlaceholder = NSAttributedString(string: "guess here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         guessField.addTarget(self, action: #selector(onEditNextToggle(_:)), for: .editingChanged)

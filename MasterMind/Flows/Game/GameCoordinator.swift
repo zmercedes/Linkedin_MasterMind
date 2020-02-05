@@ -53,4 +53,8 @@ extension GameCoordinator: GameViewControllerDelegate {
         let max = dependencies.settings.maxValue
         return RandomAPI.get(total: total, min: min, max: max).result()
     }
+    
+    func gameOver() {
+        navigate(to: .end)
+    }
 }

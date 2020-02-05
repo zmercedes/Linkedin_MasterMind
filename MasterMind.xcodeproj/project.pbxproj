@@ -15,6 +15,7 @@
 		9D01E6C623E9F412007822BD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01E6C423E9F412007822BD /* GameViewController.swift */; };
 		9D01E6C723E9F412007822BD /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D01E6C523E9F412007822BD /* GameView.xib */; };
 		9DAD730323EA41EC006E0227 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730223EA41EC006E0227 /* String.swift */; };
+		9DAD730523EB4815006E0227 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730423EB4815006E0227 /* ReusableView.swift */; };
 		9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4C23E3B05100A51780 /* AppDelegate.swift */; };
 		9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4E23E3B05100A51780 /* ViewController.swift */; };
 		9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5023E3B05100A51780 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		9D01E6C423E9F412007822BD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9D01E6C523E9F412007822BD /* GameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameView.xib; sourceTree = "<group>"; };
 		9DAD730223EA41EC006E0227 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9DAD730423EB4815006E0227 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9DC75A4923E3B05100A51780 /* MasterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC75A4C23E3B05100A51780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC75A4E23E3B05100A51780 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC75A6023E467DF00A51780 /* Coordinator.swift */,
+				9DAD730423EB4815006E0227 /* ReusableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
 				9DAD730323EA41EC006E0227 /* String.swift in Sources */,
 				9D01E6C623E9F412007822BD /* GameViewController.swift in Sources */,
+				9DAD730523EB4815006E0227 /* ReusableView.swift in Sources */,
 				9D01E6BD23E9C457007822BD /* Settings.swift in Sources */,
 				9D01E6BB23E9BFAE007822BD /* SettingsStore.swift in Sources */,
 				9D01E6C323E9CFD2007822BD /* GameCoordinator.swift in Sources */,

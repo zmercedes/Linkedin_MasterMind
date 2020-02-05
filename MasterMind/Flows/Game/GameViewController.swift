@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var triesTableView: UITableView!
     
     var currentCombination: String
+    var guessDict: [String:[Int]] = [:]
     
     init(combination: String?) {
         currentCombination = combination ?? ""
@@ -71,12 +72,16 @@ class GameViewController: UIViewController {
         } else if guess.count > currentCombination.count {
             resultLabel.text = "Too many digits, try again."
             placeLabel.text = ""
+        } else if guessDict[guess] != nil {
+            resultLabel.text = "Already tried this, try again."
+            placeLabel.text = ""
         } else {
             let matches = currentCombination.match(other: guess)
             let resultText = matches[0] > 0 ? "\(matches[0]) digits matched!" : "No digits matched."
             let placeText = matches[1] > 0 ? "\(matches[1]) matched in right place!" : ""
             resultLabel.text = resultText
             placeLabel.text = placeText
+            guessDict[guess] = matches
         }
         resultsView.isHidden = false
     }

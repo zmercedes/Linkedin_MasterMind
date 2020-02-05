@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol GameViewControllerDelegate: class {
+    func requestDigits() -> String?
+}
+
 class GameViewController: UIViewController {
     
     @IBOutlet weak var resultsView: UIView!
@@ -21,20 +25,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var previousTriesButton: UIButton!
     @IBOutlet weak var triesTableView: UITableView!
     
-    var currentCombination: String
+    weak var delegate: GameViewControllerDelegate?
+    
+    var currentCombination: String = ""
     var guessDict: [String:[Int]] = [:]
-    
-    init(combination: String?) {
-        currentCombination = combination ?? ""
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let newCombo = delegate?.requestDigits() {
+            currentCombination = newCombo
+        }
         guessField.attributedPlaceholder = NSAttributedString(string: "guess here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         guessField.addTarget(self, action: #selector(onEditNextToggle(_:)), for: .editingChanged)
         

@@ -17,6 +17,8 @@
 		9DAD730323EA41EC006E0227 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730223EA41EC006E0227 /* String.swift */; };
 		9DAD730523EB4815006E0227 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730423EB4815006E0227 /* ReusableView.swift */; };
 		9DAD730723EB48D9006E0227 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730623EB48D9006E0227 /* UITableView.swift */; };
+		9DAD730B23EB4BA0006E0227 /* GuessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD730923EB4BA0006E0227 /* GuessTableViewCell.swift */; };
+		9DAD730C23EB4BA0006E0227 /* GuessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD730A23EB4BA0006E0227 /* GuessTableViewCell.xib */; };
 		9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4C23E3B05100A51780 /* AppDelegate.swift */; };
 		9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4E23E3B05100A51780 /* ViewController.swift */; };
 		9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5023E3B05100A51780 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		9DAD730223EA41EC006E0227 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9DAD730423EB4815006E0227 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9DAD730623EB48D9006E0227 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		9DAD730923EB4BA0006E0227 /* GuessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTableViewCell.swift; sourceTree = "<group>"; };
+		9DAD730A23EB4BA0006E0227 /* GuessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuessTableViewCell.xib; sourceTree = "<group>"; };
 		9DC75A4923E3B05100A51780 /* MasterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC75A4C23E3B05100A51780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC75A4E23E3B05100A51780 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		9DAD730823EB4B76006E0227 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD730923EB4BA0006E0227 /* GuessTableViewCell.swift */,
+				9DAD730A23EB4BA0006E0227 /* GuessTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9DC75A4023E3B05000A51780 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 		9DC75A4B23E3B05100A51780 /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
+				9DAD730823EB4B76006E0227 /* Views */,
 				9D01E6B923E9BF7B007822BD /* Configuration */,
 				9D01E6B623E9BC45007822BD /* Extensions */,
 				9DC75A6423E7757600A51780 /* Services */,
@@ -231,6 +245,7 @@
 				9DC75A5423E3B05300A51780 /* Assets.xcassets in Resources */,
 				9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */,
 				9D01E6C723E9F412007822BD /* GameView.xib in Resources */,
+				9DAD730C23EB4BA0006E0227 /* GuessTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +263,7 @@
 				9DAD730323EA41EC006E0227 /* String.swift in Sources */,
 				9D01E6C623E9F412007822BD /* GameViewController.swift in Sources */,
 				9DAD730523EB4815006E0227 /* ReusableView.swift in Sources */,
+				9DAD730B23EB4BA0006E0227 /* GuessTableViewCell.swift in Sources */,
 				9D01E6BD23E9C457007822BD /* Settings.swift in Sources */,
 				9D01E6BB23E9BFAE007822BD /* SettingsStore.swift in Sources */,
 				9D01E6C323E9CFD2007822BD /* GameCoordinator.swift in Sources */,

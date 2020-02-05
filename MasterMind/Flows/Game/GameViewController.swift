@@ -18,10 +18,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var guessField: UITextField!
     @IBOutlet weak var tryButton: UIButton!
     
-    var currentCombination: [Int]
+    var currentCombination: String
     
-    init(combination: [Int]?) {
-        currentCombination = combination ?? []
+    init(combination: String?) {
+        currentCombination = combination ?? ""
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,14 +32,42 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guessField.attributedPlaceholder = NSAttributedString(string: "guess here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        var combo = ""
-        for digit in currentCombination {
-            combo += "\(digit)"
+        guessField.addTarget(self, action: #selector(onEditNextToggle(_:)), for: .editingChanged)
+        
+        var encode: String = ""
+        for _ in 0..<currentCombination.count {
+            encode = encode + "X"
         }
-        encodedNumber.text = combo
+        encodedNumber.text = encode
+    }
+    
+    @objc func onEditNextToggle(_ textField: UITextField) {
+        tryButton.isEnabled = textField.text != ""
     }
 
     @IBAction func tryButtonPressed(_ sender: Any) {
         
+        displayResults()
+    }
+    
+    private func displayResults() {
+        if !resultsView.isHidden {
+            resultsView.isHidden = true
+        }
+        let guess = guessField.text ?? ""
+        if guess.count < currentCombination.count {
+            resultLabel.text = "Not enough digits, try again."
+            placeLabel.text = ""
+        } else if guess.count > currentCombination.count {
+            resultLabel.text = "Too many digits, try again."
+            placeLabel.text = ""
+        } else {
+            let matches = currentCombination.match(other: guess)
+            let resultText = matches[0] > 0 ? "\(matches[0]) digits matched!" : "No digits matched."
+            let placeText = matches[1] > 0 ? "\(matches[1]) matched in right place!" : ""
+            resultLabel.text = resultText
+            placeLabel.text = placeText
+        }
+        resultsView.isHidden = false
     }
 }

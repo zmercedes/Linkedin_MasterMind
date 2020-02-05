@@ -80,7 +80,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="55"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-34-4U3">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-34-4U3">
                     <rect key="frame" x="143.5" y="493.5" width="88" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="G0j-YV-yUq"/>

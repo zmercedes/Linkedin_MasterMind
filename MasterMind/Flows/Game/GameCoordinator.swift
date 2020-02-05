@@ -30,13 +30,8 @@ class GameCoordinator: Coordinator {
     }
     
     func start() {
-        let total = dependencies.settings.digitLength
-        let min = dependencies.settings.minValue
-        let max = dependencies.settings.maxValue
-        if let newDigits = RandomAPI.get(total: total, min: min, max: max).result() {
-            currentCombination = newDigits
-        }
-        let viewController = GameViewController(combination: currentCombination)
+        let viewController = GameViewController()
+        viewController.delegate = self
         navigationController.pushViewController(viewController, animated: false)
     }
     
@@ -48,5 +43,14 @@ class GameCoordinator: Coordinator {
             navigationController.popViewController(animated: false)
             delegate?.ended()
         }
+    }
+}
+
+extension GameCoordinator: GameViewControllerDelegate {
+    func requestDigits() -> String? {
+        let total = dependencies.settings.digitLength
+        let min = dependencies.settings.minValue
+        let max = dependencies.settings.maxValue
+        return RandomAPI.get(total: total, min: min, max: max).result()
     }
 }

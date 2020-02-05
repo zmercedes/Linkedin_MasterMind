@@ -12,6 +12,7 @@ class ResultsViewController: CustomAlertViewController {
 
     @IBOutlet weak var alert: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
     
     var okAction: (() -> Void)?
     var titleText: String
@@ -31,6 +32,7 @@ class ResultsViewController: CustomAlertViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = titleText
+        bodyLabel.text = bodyText
         alert.layer.cornerRadius = 6
         alert.layer.borderWidth = 1
         alert.layer.borderColor = UIColor.white.cgColor

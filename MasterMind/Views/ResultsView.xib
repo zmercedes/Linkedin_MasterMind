@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController" customModule="MasterMind" customModuleProvider="target">
             <connections>
                 <outlet property="alert" destination="ZWQ-gI-KkO" id="CJ6-40-gqp"/>
+                <outlet property="bodyLabel" destination="PC8-B4-VUi" id="tCB-h3-TT1"/>
                 <outlet property="titleLabel" destination="OYX-oD-WMb" id="SSO-GW-61L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -46,6 +47,9 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wip-xj-5xs" userLabel="ok button">
                             <rect key="frame" x="0.0" y="214" width="275" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="l4i-hy-e79"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="ok">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

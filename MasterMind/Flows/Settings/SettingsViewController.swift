@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate: class {
-    func updateValues()
+    func updateValues(digits: Int, min: Int, max: Int)
     func dismissed()
 }
 
@@ -47,9 +47,18 @@ class SettingsViewController: CustomAlertViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true) {
-            
+        let minDigits = minimumDigitsField.text ?? ""
+        let minNumber = minimumNumberField.text ?? ""
+        let maxNumber = maximimNumberField.text ?? ""
+        
+        if let newDigits = Int(minDigits), let newMin = Int(minNumber), let newMax = Int(maxNumber) {
+            self.dismiss(animated: true) { [unowned self] in
+                self.delegate?.updateValues(digits: newDigits, min: newMin, max: newMax)
+                self.delegate?.dismissed()
+            }
         }
+        
+        
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

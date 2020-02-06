@@ -14,7 +14,9 @@ protocol SettingsCoordinatorDelegate: class {
 
 class SettingsCoordinator: Coordinator {
     
-    enum Destination { }
+    enum Destination {
+        case back
+    }
     
     private let navigationController: UINavigationController
     private let settings: Settings
@@ -28,18 +30,26 @@ class SettingsCoordinator: Coordinator {
     
     func start() {
         let viewController = SettingsViewController(settings: settings)
+        viewController.delegate = self
         navigationController.present(viewController, animated: true, completion: nil)
     }
     
-    func navigate(to destination: Destination) { }
+    func navigate(to destination: Destination) {
+        switch destination {
+        case .back:
+            self.delegate?.dismissed()
+        }
+    }
 }
 
 extension SettingsCoordinator: SettingsViewControllerDelegate {
-    func updateValues() {
-        
+    func updateValues(digits: Int, min: Int, max: Int) {
+        if digits >= 4 && digits <= 8 && min >= 0 && min <= 9 && max >= 0 && max <= 9 && max >= min {
+            settings.setValues(length: digits, min: min, max: max)
+        }
     }
     
     func dismissed() {
-        self.delegate?.dismissed()
+        self.navigate(to: .back)
     }
 }

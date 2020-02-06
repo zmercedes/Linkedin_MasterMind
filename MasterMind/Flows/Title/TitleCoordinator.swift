@@ -39,6 +39,7 @@ class TitleCoordinator: Coordinator {
             gameCoordinator?.start()
         case .settings:
             settingsCoordinator = SettingsCoordinator(navigation: navigationController, settings: dependencies.settings)
+            settingsCoordinator?.delegate = self
             settingsCoordinator?.start()
         }
     }
@@ -60,5 +61,11 @@ extension TitleCoordinator: TitleViewControllerDelegate {
 extension TitleCoordinator: GameCoordinatorDelegate {
     func ended() {
         gameCoordinator = nil
+    }
+}
+
+extension TitleCoordinator: SettingsCoordinatorDelegate {
+    func dismissed() {
+        settingsCoordinator = nil
     }
 }

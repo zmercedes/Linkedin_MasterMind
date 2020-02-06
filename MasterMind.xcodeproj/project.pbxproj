@@ -22,6 +22,7 @@
 		9DAD731623EB7318006E0227 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD731523EB7318006E0227 /* CustomAlertViewController.swift */; };
 		9DAD731923EB73FE006E0227 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD731723EB73FE006E0227 /* ResultsViewController.swift */; };
 		9DAD731A23EB73FE006E0227 /* ResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD731823EB73FE006E0227 /* ResultsView.xib */; };
+		9DAD731D23EB9904006E0227 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD731C23EB9904006E0227 /* SettingsCoordinator.swift */; };
 		9DC75A4D23E3B05100A51780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4C23E3B05100A51780 /* AppDelegate.swift */; };
 		9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC75A4E23E3B05100A51780 /* ViewController.swift */; };
 		9DC75A5223E3B05100A51780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC75A5023E3B05100A51780 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		9DAD731523EB7318006E0227 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		9DAD731723EB73FE006E0227 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9DAD731823EB73FE006E0227 /* ResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsView.xib; sourceTree = "<group>"; };
+		9DAD731C23EB9904006E0227 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9DC75A4923E3B05100A51780 /* MasterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC75A4C23E3B05100A51780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC75A4E23E3B05100A51780 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9DAD731B23EB98E7006E0227 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD731C23EB9904006E0227 /* SettingsCoordinator.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		9DC75A4023E3B05000A51780 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		9DC75A5E23E465CA00A51780 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				9DAD731B23EB98E7006E0227 /* Settings */,
 				9D01E6C123E9CF8D007822BD /* Game */,
 				9DC75A6723E865C000A51780 /* Title */,
 				9DC75A6223E4D09600A51780 /* AppCoordinator.swift */,
@@ -271,6 +282,7 @@
 				9DAD731923EB73FE006E0227 /* ResultsViewController.swift in Sources */,
 				9DAD731623EB7318006E0227 /* CustomAlertViewController.swift in Sources */,
 				9DC75A6623E7956400A51780 /* RandomAPI.swift in Sources */,
+				9DAD731D23EB9904006E0227 /* SettingsCoordinator.swift in Sources */,
 				9DC75A4F23E3B05100A51780 /* ViewController.swift in Sources */,
 				9DAD730323EA41EC006E0227 /* String.swift in Sources */,
 				9D01E6C623E9F412007822BD /* GameViewController.swift in Sources */,

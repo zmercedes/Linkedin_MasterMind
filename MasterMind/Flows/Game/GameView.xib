@@ -14,8 +14,10 @@
             <connections>
                 <outlet property="encodedNumber" destination="Foe-bv-oLe" id="t4z-dw-4Ed"/>
                 <outlet property="guessField" destination="Xtp-GP-0j6" id="F8n-8i-HqG"/>
+                <outlet property="nextButton" destination="4KD-No-3qd" id="7lx-eJ-WWX"/>
                 <outlet property="placeLabel" destination="ogM-15-Dtb" id="9nn-nL-o9R"/>
                 <outlet property="previousTriesButton" destination="XYG-Kb-3dg" id="KbN-fr-jVH"/>
+                <outlet property="quitButton" destination="lBw-HM-G7I" id="6VP-mB-Qbz"/>
                 <outlet property="resultLabel" destination="Vx7-Yf-ZLW" id="lbP-MP-FE2"/>
                 <outlet property="resultsView" destination="YSJ-b9-IdR" id="nnk-0O-tND"/>
                 <outlet property="triesTableView" destination="yP4-rw-I0q" id="l1L-Ei-oUi"/>
@@ -113,14 +115,36 @@
                         <action selector="previousTriesPressed:" destination="-1" eventType="touchUpInside" id="fJc-Zx-qDq"/>
                     </connections>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KD-No-3qd" userLabel="Next Button">
+                    <rect key="frame" x="50" y="569.5" width="56" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="TpB-uf-3xH"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBw-HM-G7I" userLabel="Quit Button">
+                    <rect key="frame" x="276" y="569.5" width="49" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="quit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="quitButtonPressed:" destination="-1" eventType="touchUpInside" id="xMI-iw-Ab7"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="XYG-Kb-3dg" firstAttribute="bottom" secondItem="4KD-No-3qd" secondAttribute="top" id="0Ah-3F-tg9"/>
                 <constraint firstItem="YSJ-b9-IdR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="3N6-E6-8ex"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="top" secondItem="yP4-rw-I0q" secondAttribute="bottom" id="81e-n4-Tfb"/>
                 <constraint firstItem="Xtp-GP-0j6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8R8-RL-2ux"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUQ-34-4U3" secondAttribute="trailing" constant="50" id="BnP-vS-pQy"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="JqT-aS-DRB"/>
+                <constraint firstItem="4KD-No-3qd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="KzN-7R-gTf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K1S-73-gfU" secondAttribute="trailing" id="T9R-pr-9jF"/>
                 <constraint firstItem="K1S-73-gfU" firstAttribute="top" secondItem="YSJ-b9-IdR" secondAttribute="bottom" constant="50" id="UDw-is-8II"/>
                 <constraint firstItem="YSJ-b9-IdR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Wbo-gf-BMz"/>
@@ -128,11 +152,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yP4-rw-I0q" secondAttribute="trailing" constant="50" id="Wsj-Zr-AHu"/>
                 <constraint firstItem="K1S-73-gfU" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ceF-Fu-hJk"/>
                 <constraint firstItem="yP4-rw-I0q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="ck1-p9-H5a"/>
+                <constraint firstItem="XYG-Kb-3dg" firstAttribute="bottom" secondItem="lBw-HM-G7I" secondAttribute="top" id="ftZ-AR-fZK"/>
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="g42-fy-54c"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="top" secondItem="gUQ-34-4U3" secondAttribute="bottom" id="gBM-Xi-sM3"/>
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="top" secondItem="Xtp-GP-0j6" secondAttribute="bottom" id="hre-4z-D7l"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xtp-GP-0j6" secondAttribute="trailing" id="jq9-4i-bEE"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pP6-Eq-QKV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lBw-HM-G7I" secondAttribute="trailing" constant="50" id="wAE-l5-Zou"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XYG-Kb-3dg" secondAttribute="trailing" constant="50" id="xgt-8Z-sKW"/>
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="yFW-ya-Zqf"/>
                 <constraint firstItem="Xtp-GP-0j6" firstAttribute="top" secondItem="K1S-73-gfU" secondAttribute="bottom" constant="10" id="yQg-Ps-ahK"/>

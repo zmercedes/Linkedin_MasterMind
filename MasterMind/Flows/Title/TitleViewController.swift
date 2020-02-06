@@ -10,6 +10,7 @@ import UIKit
 
 protocol TitleViewControllerDelegate: class {
     func startGame()
+    func startSettings()
 }
 
 class TitleViewController: UIViewController {
@@ -26,7 +27,7 @@ class TitleViewController: UIViewController {
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
-        
+        delegate?.startSettings()
     }
     
 }

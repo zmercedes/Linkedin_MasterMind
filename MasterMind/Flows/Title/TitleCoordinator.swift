@@ -18,6 +18,7 @@ class TitleCoordinator: Coordinator {
     private let navigationController: UINavigationController
     private let dependencies: Dependencies
     private var gameCoordinator: GameCoordinator?
+    private var settingsCoordinator: SettingsCoordinator?
     
     init(navigation: UINavigationController, dependencies: Dependencies) {
         self.navigationController = navigation
@@ -37,7 +38,8 @@ class TitleCoordinator: Coordinator {
             gameCoordinator?.delegate = self
             gameCoordinator?.start()
         case .settings:
-            print("travelled to settings")
+            settingsCoordinator = SettingsCoordinator(navigation: navigationController, settings: dependencies.settings)
+            settingsCoordinator?.start()
         }
     }
     
@@ -49,6 +51,9 @@ class TitleCoordinator: Coordinator {
 extension TitleCoordinator: TitleViewControllerDelegate {
     func startGame() {
         navigate(to: .game)
+    }
+    func startSettings() {
+        navigate(to: .settings)
     }
 }
 

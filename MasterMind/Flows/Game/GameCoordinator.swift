@@ -9,6 +9,7 @@
 import UIKit
 
 protocol GameCoordinatorDelegate: class {
+    func startSettings()
     func ended()
 }
 
@@ -30,8 +31,11 @@ class GameCoordinator: Coordinator {
     }
     
     func start() {
+        let settingImage = #imageLiteral(resourceName: "ico-cog")
+        let settingsButton = UIBarButtonItem(image: settingImage, style: .plain, target: self, action: #selector(settingsButtonPressed))
         let viewController = GameViewController()
         viewController.delegate = self
+        viewController.navigationItem.setRightBarButton(settingsButton, animated: false)
         navigationController.pushViewController(viewController, animated: false)
     }
     
@@ -43,6 +47,10 @@ class GameCoordinator: Coordinator {
             navigationController.popViewController(animated: false)
             delegate?.ended()
         }
+    }
+    
+    @objc func settingsButtonPressed() {
+        delegate?.startSettings()
     }
 }
 

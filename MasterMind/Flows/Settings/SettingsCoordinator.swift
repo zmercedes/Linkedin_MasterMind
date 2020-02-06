@@ -21,7 +21,8 @@ class SettingsCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let viewController = SettingsViewController(settings: settings)
+        navigationController.present(viewController, animated: true, completion: nil)
     }
     
     func navigate(to destination: Destination) {

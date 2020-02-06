@@ -6,7 +6,7 @@ This game was created using Xcode 10.1 and Swift 4.2.
 - The game is currently designed to be played on an iPhone XR Simulator with mouse and keyboard.
 
 ## Thought Process
-Initially, I knew what tools I would be using to build the project, but the creative idea which would shape the final build did not come until after a couple days. As such, I started with what I know: building out the most basic app architecture using the coordinator pattern, which is extensible enough to accomodate any app with multiple levels of functionality. As I built out the foundation, the requirements for the game started to remind me of how hacking is portrayed in popular media, with Cowboy Bebop being at the forefront. This is what helped me choose the overall theme of hacking/cracking.  
+Initially, I knew what tools I would be using to build the project, but the creative idea which would shape the final build did not come until after a couple days. As such, I started with what I know: building out the most basic app architecture using the coordinator pattern, which is extensible enough to accomodate any app with multiple levels of functionality. As I built out the foundation, the requirements for the game started to remind me of how hacking is portrayed in popular media, with Cowboy Bebop being at the forefront. This is what helped me choose the overall theme of hacking/cracking. I tried to follow SOLID principles as much as possible. Using the delegate pattern helped me automatically manage object memory, as well as helps to observe the single responsibility principle. 
 
 ## Creative Implementations
 ### Implemented

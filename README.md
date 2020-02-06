@@ -1,23 +1,38 @@
-# Mastermind Game
-Please implement a mastermind game, which can be played by a user "against" the computer. This is a game where a player tries to guess the number combinations. At the end of each attempt to guess the 4 number combinations, the computer will provide feedback whether the player had guess a number correctly, or/and a number and digit correctly. A player must guess the right number combinations within 10 attempts to win the game.
+# Mastermind
+### A game by Zoilo Mercedes for the LinkedIn REACH Apprentice Engineer III Interview.
 
-## Game rules
-- At the start of the game the computer will randomly select a pattern of four different numbers from a total of 8 different numbers.
-- A player will have 10 attempts to guess the number combinations
-- At the end of each guess, computer will provide one of the following response
-as feedback:
-- The player had guess a correct number
-- The player had guessed a correct number and its correct location
-- The player’s guess was incorrect
+This game was created using Xcode 10.1 and Swift 4.2. 
+- The game is made to be played in landscape mode.
+- The game is currently designed to be played on an iPhone XR Simulator with mouse and keyboard.
 
-**Note that the computer’s feedback should not reveal which number the player guessed correctly**
+## Thought Process
+Initially, I knew what tools I would be using to build the project, but the creative idea which would shape the final build did not come until after a couple days. As such, I started with what I know: building out the most basic app architecture using the coordinator pattern, which is extensible enough to accomodate any app with multiple levels of functionality. As I built out the foundation, the requirements for the game started to remind me of how hacking is portrayed in popular media, with Cowboy Bebop being at the forefront. This is what helped me choose the overall theme of hacking/cracking.  
 
-## User Interface
-the player must have a way of interacting with your game including:
-- Ability to guess the combinations of 4 numbers
-- Ability to view the history of guesses and their feedback
-- The number of guesses remaining is displayed
+## Creative Implementations
+### Implemented
+- I stylized the app in full, minimal dark mode. 
+- There are views which are animated to move in and out of the screen on certain UI interactions. 
+- guess history is implemented as a disappearing TableView.
+- I implemented gamification by adding the ability to have multiple back to back sessions of number guessing, as long as you guess correctly. 
+- Multiple wins will create a streak, which can be used as a high score. 
+- I added a settings pane, which allows a user to toggle the values for the number of digits, minimum and maximum numbers.
+- All settings values persist across runs.
 
-## Implementation
-- Use Random generator API (https://www.random.org/clients/http/api/) to randomly select 4 numbers from 0 ~ 7 (Duplicate numbers are allowed)
-- You can choose whichever combination of programming languages, tools, frameworks, and libraries you find appropriate within reason (e.g. you can’t use a game framework that implements Mastermind)
+### Planned
+- I want to implement an actual story. Breaking into someone's hidden stuff could be a very compelling storyline. 
+	- For example, breaking into someone's computer and finding sensitive documents could initiate a storyline which would lead the player down a path of cracking to continue the story.
+- Since streaks could be used as high scores, having a local/global leaderboard would be possible by adding a backend.
+- Powerup mechanics could help make the game more interesting.
+	- a player could get a free autohack to continue their streak
+	- extra hints could help the player in a pinch
+	- some powerup could automatically deduce a single digit of the sequence
+
+
+## Premise
+- MasterMind is an app where you, with the help of an AI toolkit called MasterMind, scour the net for hackable entities and break into their every secret.
+- Upon finding an entity, MasterMind scans and detects an attack vector, and displays a 4-8 digit number which you must guess.
+- MasterMind is the best tool in its class, but it's not infallible. In fact, you only get 10 chances to break the system.
+- It is still in early alpha, so only basic hints about the encoded number can be deduced.
+- Despite this, MasterMind is a highly popular, as well as highly illegal tool. If you run out of chances, you will be found and arrested for high cyber crimes.
+- Planned upgrades include the ability to acquire the secrets stored within the encoded entity. Anything is vulnerable - from the documents of an unsavory megacorporation to a middle class family's college fund.
+

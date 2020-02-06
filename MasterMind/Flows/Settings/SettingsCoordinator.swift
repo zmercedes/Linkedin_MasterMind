@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol SettingsCoordinatorDelegate: class {
+    func dismissed()
+}
+
 class SettingsCoordinator: Coordinator {
     
     enum Destination { }
     
     private let navigationController: UINavigationController
     private let settings: Settings
+    
+    weak var delegate: SettingsCoordinatorDelegate?
     
     init(navigation: UINavigationController, settings: Settings) {
         self.navigationController = navigation
@@ -25,7 +31,15 @@ class SettingsCoordinator: Coordinator {
         navigationController.present(viewController, animated: true, completion: nil)
     }
     
-    func navigate(to destination: Destination) {
+    func navigate(to destination: Destination) { }
+}
+
+extension SettingsCoordinator: SettingsViewControllerDelegate {
+    func updateValues() {
         
+    }
+    
+    func dismissed() {
+        self.delegate?.dismissed()
     }
 }

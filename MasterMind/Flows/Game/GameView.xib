@@ -125,7 +125,7 @@
                         <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="TpB-uf-3xH"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBw-HM-G7I" userLabel="Quit Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBw-HM-G7I" userLabel="Quit Button">
                     <rect key="frame" x="276" y="569.5" width="49" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="quit">

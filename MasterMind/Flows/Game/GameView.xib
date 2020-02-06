@@ -20,6 +20,8 @@
                 <outlet property="quitButton" destination="lBw-HM-G7I" id="6VP-mB-Qbz"/>
                 <outlet property="resultLabel" destination="Vx7-Yf-ZLW" id="lbP-MP-FE2"/>
                 <outlet property="resultsView" destination="YSJ-b9-IdR" id="nnk-0O-tND"/>
+                <outlet property="streakLabel" destination="Ju2-Hp-qjB" id="Ik3-kd-jwq"/>
+                <outlet property="triesLeftLabel" destination="PbG-1t-GKI" id="4mY-6d-cyq"/>
                 <outlet property="triesTableView" destination="yP4-rw-I0q" id="l1L-Ei-oUi"/>
                 <outlet property="triesTableViewHeight" destination="MQA-qs-oMK" id="uhC-bj-y73"/>
                 <outlet property="tryButton" destination="gUQ-34-4U3" id="xlf-zv-dgw"/>
@@ -57,6 +59,18 @@
                         <constraint firstItem="Vx7-Yf-ZLW" firstAttribute="leading" secondItem="YSJ-b9-IdR" secondAttribute="leading" constant="10" id="qIe-Mr-lFo"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tries left: 10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbG-1t-GKI" userLabel="Tries Left Label">
+                    <rect key="frame" x="50" y="274.5" width="102" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="streak: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-Hp-qjB" userLabel="Streak Label">
+                    <rect key="frame" x="249" y="274.5" width="76" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1S-73-gfU" userLabel="Encoded Number View">
                     <rect key="frame" x="0.0" y="303.5" width="375" height="80"/>
                     <subviews>
@@ -145,6 +159,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUQ-34-4U3" secondAttribute="trailing" constant="50" id="BnP-vS-pQy"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="JqT-aS-DRB"/>
                 <constraint firstItem="4KD-No-3qd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="KzN-7R-gTf"/>
+                <constraint firstItem="PbG-1t-GKI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Ryh-de-D4q"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K1S-73-gfU" secondAttribute="trailing" id="T9R-pr-9jF"/>
                 <constraint firstItem="K1S-73-gfU" firstAttribute="top" secondItem="YSJ-b9-IdR" secondAttribute="bottom" constant="50" id="UDw-is-8II"/>
                 <constraint firstItem="YSJ-b9-IdR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Wbo-gf-BMz"/>
@@ -156,13 +171,16 @@
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="g42-fy-54c"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="top" secondItem="gUQ-34-4U3" secondAttribute="bottom" id="gBM-Xi-sM3"/>
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="top" secondItem="Xtp-GP-0j6" secondAttribute="bottom" id="hre-4z-D7l"/>
+                <constraint firstItem="K1S-73-gfU" firstAttribute="top" secondItem="Ju2-Hp-qjB" secondAttribute="bottom" constant="5" id="inH-A4-rGk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xtp-GP-0j6" secondAttribute="trailing" id="jq9-4i-bEE"/>
                 <constraint firstItem="XYG-Kb-3dg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pP6-Eq-QKV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lBw-HM-G7I" secondAttribute="trailing" constant="50" id="wAE-l5-Zou"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ju2-Hp-qjB" secondAttribute="trailing" constant="50" id="wtp-l9-JO5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XYG-Kb-3dg" secondAttribute="trailing" constant="50" id="xgt-8Z-sKW"/>
                 <constraint firstItem="gUQ-34-4U3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="yFW-ya-Zqf"/>
                 <constraint firstItem="Xtp-GP-0j6" firstAttribute="top" secondItem="K1S-73-gfU" secondAttribute="bottom" constant="10" id="yQg-Ps-ahK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YSJ-b9-IdR" secondAttribute="trailing" constant="50" id="yW3-s7-F7U"/>
+                <constraint firstItem="K1S-73-gfU" firstAttribute="top" secondItem="PbG-1t-GKI" secondAttribute="bottom" constant="5" id="zbW-qb-Nqo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

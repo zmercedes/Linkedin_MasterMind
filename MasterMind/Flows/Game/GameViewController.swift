@@ -27,6 +27,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var triesTableView: UITableView!
     @IBOutlet weak var triesTableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var triesLeftLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var quitButton: UIButton!
     
@@ -36,6 +39,7 @@ class GameViewController: UIViewController {
     private var guesses: [String] = []
     private var guessDict: [String:[Int]] = [:]
     private var victory: Bool = false
+    private var streak: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,6 +118,8 @@ class GameViewController: UIViewController {
                 failure()
             }
         }
+        let triesLeft = 10 - guesses.count
+        triesLeftLabel.text = "tries left: \(triesLeft)"
         triesTableViewHeight.constant = guesses.count > 0 ? CGFloat(42*guesses.count) : 42
         triesTableView.reloadData()
         resultsView.isHidden = false
@@ -126,6 +132,8 @@ class GameViewController: UIViewController {
         let alert = ResultsViewController(title: alertTitle, body: body)
         self.present(alert, animated: true, completion: nil)
         nextButton.isHidden = false
+        streak = streak + 1
+        streakLabel.text = "streak: \(streak)"
     }
     
     private func failure() {

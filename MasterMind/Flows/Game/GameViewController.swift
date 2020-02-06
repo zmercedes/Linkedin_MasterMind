@@ -43,7 +43,6 @@ class GameViewController: UIViewController {
         resultsView.setStyle()
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
-            print(currentCombination)
         } else {
             error()
         }
@@ -127,7 +126,6 @@ class GameViewController: UIViewController {
         let alert = ResultsViewController(title: alertTitle, body: body)
         self.present(alert, animated: true, completion: nil)
         nextButton.isHidden = false
-        quitButton.isHidden = false
     }
     
     private func failure() {
@@ -150,7 +148,6 @@ class GameViewController: UIViewController {
     
     private func reset() {
         nextButton.isHidden = true
-        quitButton.isHidden = true
         resultsView.isHidden = true
         guessField.text = ""
         guesses = []

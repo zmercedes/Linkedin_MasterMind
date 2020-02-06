@@ -12,6 +12,7 @@ extension UINavigationController {
     func setStyle() {
         navigationBar.isTranslucent = false
         navigationBar.barTintColor = .black
+        navigationBar.tintColor = .white
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
     }

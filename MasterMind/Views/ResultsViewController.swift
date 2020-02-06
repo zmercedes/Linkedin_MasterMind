@@ -31,11 +31,10 @@ class ResultsViewController: CustomAlertViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        entryDirection = .top
         titleLabel.text = titleText
         bodyLabel.text = bodyText
-        alert.layer.cornerRadius = 6
-        alert.layer.borderWidth = 1
-        alert.layer.borderColor = UIColor.white.cgColor
+        alert.setStyle()
         alertView = alert
     }
     

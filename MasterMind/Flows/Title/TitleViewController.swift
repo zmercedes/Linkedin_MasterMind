@@ -14,12 +14,15 @@ protocol TitleViewControllerDelegate: class {
 }
 
 class TitleViewController: UIViewController {
-
+    
+    @IBOutlet weak var aboutView: UIView!
+    @IBOutlet weak var aboutButton: UIButton!
+    
     weak var delegate: TitleViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        aboutView.setStyle()
     }
     
     @IBAction func findButtonPressed(_ sender: Any) {
@@ -28,6 +31,13 @@ class TitleViewController: UIViewController {
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
         delegate?.startSettings()
+    }
+    
+    @IBAction func aboutButtonPressed(_ sender: Any) {
+        let hidden = aboutView.isHidden
+        let buttonText = hidden ? "Close" : "About"
+        aboutButton.setTitle(buttonText, for: .normal)
+        aboutView.isHidden = !hidden
     }
     
 }

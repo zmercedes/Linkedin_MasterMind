@@ -40,9 +40,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
-        resultsView.layer.cornerRadius = 6
-        resultsView.layer.borderWidth = 1
-        resultsView.layer.borderColor = UIColor.white.cgColor
+        resultsView.setStyle()
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
             print(currentCombination)
@@ -162,7 +160,6 @@ class GameViewController: UIViewController {
         triesTableView.reloadData()
         if let newCombo = delegate?.requestDigits() {
             currentCombination = newCombo
-            print(currentCombination)
         } else {
             error()
         }
